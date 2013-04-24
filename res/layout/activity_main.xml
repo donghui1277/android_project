@@ -1,0 +1,208 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/LinearLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg0"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/Week"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:text="7"
+            android:textSize="25sp" />
+        
+        <ImageButton
+            android:id="@+id/imageButton1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/ic_launcher" />
+
+        <TextView
+            android:id="@+id/TextView1"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:text="星期一"
+            android:textSize="25sp"
+            android:layout_margin="5dp" />
+
+        <ImageButton
+            android:id="@+id/imageButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:src="@drawable/ic_launcher" />
+
+    </LinearLayout>
+
+    
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:shrinkColumns="1,2"
+        android:stretchColumns="1,2" >
+        
+        <TableLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent">
+        <TableRow>
+
+            <TextView
+                android:layout_weight="1"
+                android:shadowRadius="1"
+                android:text="课节"
+                android:textSize="40px" />
+
+            <TextView
+                android:layout_weight="1"
+                android:shadowRadius="1"
+                android:text="课程"
+                android:textSize="40px" />
+
+            <TextView
+                android:layout_weight="1"
+                android:gravity="center"
+                android:shadowRadius="1"
+                android:text="教室"
+                android:textSize="40px" />
+
+        </TableRow>
+        
+        <View
+            android:layout_height="1dip"
+            android:background="#00ffff" >
+        </View>
+        
+    </TableLayout>
+
+        <TableRow>
+
+            <TextView android:text="1-2节" />
+
+            <TextView
+                android:id="@+id/TextView11"
+                android:gravity="center"
+                android:text="11" />
+
+            <TextView
+                android:id="@+id/TextView12"
+                android:gravity="center"
+                android:text="12" />
+
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#00ffff" >
+        </View>
+        
+        <TableRow>
+
+            <TextView android:text="3-4节" />
+
+            <TextView
+                android:id="@+id/TextView21"
+                android:gravity="center"
+                android:text="21" />
+
+            <TextView
+                android:id="@+id/TextView22"
+                android:gravity="center"
+                android:text="22" />
+
+        </TableRow>
+        
+        <View
+            android:layout_height="1dip"
+            android:background="#00ffff" >
+        </View>
+
+        <TableRow>
+
+            <TextView android:text="5-6节" />
+
+            <TextView
+                android:id="@+id/TextView31"
+                android:gravity="center"
+                android:text="31" />
+
+            <TextView
+                android:id="@+id/TextView32"
+                android:gravity="center"
+                android:text="32" />
+
+        </TableRow>
+
+        <View
+            android:layout_height="1dip"
+            android:background="#00ffff" >
+        </View>
+        
+        <TableRow>
+
+            <TextView android:text="7-8节" />
+
+            <TextView
+                android:id="@+id/TextView41"
+                android:gravity="center"
+                android:text="41" />
+
+            <TextView
+                android:id="@+id/TextView42"
+                android:gravity="center"
+                android:text="42" />
+
+        </TableRow>
+        
+        <View
+            android:layout_height="1dip"
+            android:background="#00ffff" >
+        </View>
+
+        <TableRow>
+
+            <TextView android:text="9-11节" />
+
+            <TextView
+                android:id="@+id/TextView51"
+                android:gravity="center"
+                android:text="51" />
+
+            <TextView
+                android:id="@+id/TextView52"
+                android:gravity="center"
+                android:text="52" />
+
+        </TableRow>
+        
+        <View
+            android:layout_height="1dip"
+            android:background="#00ffff" >
+        </View>
+    </TableLayout>
+
+    
+    <TextView 
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:textColor="#00ff00"
+        android:text="Keep It Simple, Stupid"
+        android:textSize="25sp"
+        android:gravity="center"/>
+</LinearLayout>

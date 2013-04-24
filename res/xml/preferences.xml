@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <PreferenceCategory android:title="设置">
+            <ListPreference 
+                android:title="星期"
+                android:key="day"
+                android:entries="@array/day"
+                android:entryValues="@array/day_value"
+                android:defaultValue="0"
+                />
+            <ListPreference 
+                android:title="课次"
+                android:key="lesson"
+                android:entries="@array/lesson"
+                android:entryValues="@array/lesson_value"
+                android:defaultValue="1"
+                />
+        </PreferenceCategory>
+        
+        <PreferenceCategory android:title="课程详细">
+            <EditTextPreference 
+                android:key="name"
+                android:title="课名"/>
+            <EditTextPreference 
+                android:key="address"
+                android:title="教室"/>
+        </PreferenceCategory>
+    </PreferenceScreen>
