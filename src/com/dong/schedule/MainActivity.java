@@ -1,6 +1,5 @@
 package com.dong.schedule;
 
-import java.net.URL;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -10,30 +9,42 @@ import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.view.GestureDetector;
+import android.view.GestureDetector.OnGestureListener;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
+import android.view.View.OnTouchListener;
 import android.widget.CalendarView;
 import android.widget.ImageButton;
+import android.widget.TableLayout;
 import android.widget.TextView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends Activity implements OnTouchListener, OnGestureListener{
 	
 	DAOImp daoImp;
 	int  today = (Calendar.getInstance().get(Calendar.DAY_OF_WEEK)+6)%7;
 	String week[] = {"星期日","星期一","星期二","星期三","星期四","星期五","星期六"};
+	GestureDetector mGestureDetector;
+	TextView textView;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		mGestureDetector = new GestureDetector((OnGestureListener) this);
 		
+		TableLayout viewSnsLayout = (TableLayout)findViewById(R.id.TableLayout);    
+        viewSnsLayout.setOnTouchListener(this);    
+        viewSnsLayout.setLongClickable(true);
+        
 		daoImp = new DAOImp(this);
 		
 		ImageButton btnleft = (ImageButton) findViewById(R.id.imageButton1);
 		ImageButton btnright = (ImageButton) findViewById(R.id.imageButton2);
-		final TextView textView = (TextView) findViewById(R.id.TextView1);
+		textView = (TextView) findViewById(R.id.TextView1);
 		final TextView textView2 = (TextView) findViewById(R.id.Week);
 		textView2.setText(Calendar.getInstance().get(Calendar.WEEK_OF_YEAR)-8+"");
 		updateView(today);
@@ -166,5 +177,70 @@ public class MainActivity extends Activity {
 			 return true;
 		 }
 		return false;
+	}
+
+
+	@Override
+	public boolean onDown(MotionEvent e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	private int verticalMinDistance = 20;  
+	private int minVelocity         = 0; 
+	@Override
+	public boolean onFling(MotionEvent e1, MotionEvent e2, float velocityX,
+			float velocityY) {
+		// TODO Auto-generated method stub
+		if (e1.getX() - e2.getX() > verticalMinDistance && Math.abs(velocityX) > minVelocity) {  
+			  
+			today = (today+1)%7;
+			updateView(today);
+			textView.setText(week[today]);
+			
+	    } else if (e2.getX() - e1.getX() > verticalMinDistance && Math.abs(velocityX) > minVelocity) {  
+
+	    	today = (today+6)%7;
+			updateView(today);
+			textView.setText(week[today]);
+	    } 
+		return false;
+	}
+
+
+	@Override
+	public void onLongPress(MotionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public boolean onScroll(MotionEvent e1, MotionEvent e2, float distanceX,
+			float distanceY) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public void onShowPress(MotionEvent e) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public boolean onSingleTapUp(MotionEvent e) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+	@Override
+	public boolean onTouch(View v, MotionEvent event) {
+		// TODO Auto-generated method stub
+		return mGestureDetector.onTouchEvent(event);
 	}
 }

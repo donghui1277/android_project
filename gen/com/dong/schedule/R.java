@@ -33,21 +33,22 @@ public final class R {
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0000;
+        public static final int TableLayout=0x7f0a0005;
         public static final int TextView1=0x7f0a0003;
-        public static final int TextView11=0x7f0a0005;
-        public static final int TextView12=0x7f0a0006;
-        public static final int TextView21=0x7f0a0007;
-        public static final int TextView22=0x7f0a0008;
-        public static final int TextView31=0x7f0a0009;
-        public static final int TextView32=0x7f0a000a;
-        public static final int TextView41=0x7f0a000b;
-        public static final int TextView42=0x7f0a000c;
-        public static final int TextView51=0x7f0a000d;
-        public static final int TextView52=0x7f0a000e;
+        public static final int TextView11=0x7f0a0006;
+        public static final int TextView12=0x7f0a0007;
+        public static final int TextView21=0x7f0a0008;
+        public static final int TextView22=0x7f0a0009;
+        public static final int TextView31=0x7f0a000a;
+        public static final int TextView32=0x7f0a000b;
+        public static final int TextView41=0x7f0a000c;
+        public static final int TextView42=0x7f0a000d;
+        public static final int TextView51=0x7f0a000e;
+        public static final int TextView52=0x7f0a000f;
         public static final int Week=0x7f0a0001;
-        public static final int action_about=0x7f0a000f;
-        public static final int action_edit=0x7f0a0010;
-        public static final int action_exit=0x7f0a0011;
+        public static final int action_about=0x7f0a0010;
+        public static final int action_edit=0x7f0a0011;
+        public static final int action_exit=0x7f0a0012;
         public static final int imageButton1=0x7f0a0002;
         public static final int imageButton2=0x7f0a0004;
     }
