@@ -9,6 +9,8 @@ package com.dong.schedule;
 
 public final class R {
     public static final class array {
+        public static final int bg=0x7f050004;
+        public static final int bg_value=0x7f050005;
         public static final int day=0x7f050000;
         public static final int day_value=0x7f050001;
         public static final int lesson=0x7f050002;
@@ -29,10 +31,18 @@ public final class R {
     public static final class drawable {
         public static final int bg0=0x7f020000;
         public static final int bg1=0x7f020001;
-        public static final int ic_launcher=0x7f020002;
+        public static final int bg2=0x7f020002;
+        public static final int bg3=0x7f020003;
+        public static final int bg4=0x7f020004;
+        public static final int bg5=0x7f020005;
+        public static final int editbg=0x7f020006;
+        public static final int ic_launcher=0x7f020007;
+        public static final int listbg0=0x7f020008;
     }
     public static final class id {
         public static final int LinearLayout1=0x7f0a0000;
+        public static final int Note=0x7f0a0014;
+        public static final int NoteList=0x7f0a0010;
         public static final int TableLayout=0x7f0a0005;
         public static final int TextView1=0x7f0a0003;
         public static final int TextView11=0x7f0a0006;
@@ -45,23 +55,28 @@ public final class R {
         public static final int TextView42=0x7f0a000d;
         public static final int TextView51=0x7f0a000e;
         public static final int TextView52=0x7f0a000f;
+        public static final int Time=0x7f0a0013;
         public static final int Week=0x7f0a0001;
-        public static final int action_about=0x7f0a0010;
-        public static final int action_edit=0x7f0a0011;
-        public static final int action_exit=0x7f0a0012;
+        public static final int action_edit=0x7f0a0016;
+        public static final int action_exit=0x7f0a0017;
+        public static final int action_new=0x7f0a0015;
         public static final int imageButton1=0x7f0a0002;
         public static final int imageButton2=0x7f0a0004;
+        public static final int timeLable=0x7f0a0012;
+        public static final int title=0x7f0a0011;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int list_item=0x7f030001;
+        public static final int note=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f090000;
     }
     public static final class string {
-        public static final int action_about=0x7f070001;
         public static final int action_edit=0x7f070002;
         public static final int action_exit=0x7f070003;
+        public static final int action_new=0x7f070001;
         public static final int app_name=0x7f070000;
         public static final int edit=0x7f070004;
         public static final int hello_world=0x7f070005;

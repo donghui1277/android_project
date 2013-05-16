@@ -26,4 +26,14 @@
                 android:key="address"
                 android:title="教室"/>
         </PreferenceCategory>
+        
+        <PreferenceCategory android:title="个性化">
+            <ListPreference 
+                android:title="背景"
+                android:key="bg"
+                android:entries="@array/bg"
+                android:entryValues="@array/bg_value"
+                android:defaultValue="2"
+                />
+        </PreferenceCategory>
     </PreferenceScreen>

@@ -28,6 +28,11 @@
             android:name="com.dong.schedule.Edit"
             android:label="@string/edit">            
         </activity>
+        
+        <activity
+            android:name="com.dong.schedule.NoteActivity"
+            android:theme="@android:style/Theme.NoTitleBar" >            
+        </activity>
     </application>
 
 </manifest>

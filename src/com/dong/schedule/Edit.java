@@ -4,6 +4,7 @@ import java.util.prefs.PreferenceChangeEvent;
 import java.util.prefs.PreferenceChangeListener;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.DialogInterface.OnKeyListener;
 import android.content.SharedPreferences;
 import android.os.Bundle;
@@ -35,6 +36,7 @@ public class Edit extends PreferenceActivity implements OnPreferenceChangeListen
 		name_editPreference.setOnPreferenceChangeListener(this);
 		address_editPreference.setOnPreferenceChangeListener(this);
 		
+		
 		daoImp = new DAOImp(this);
 		sp = PreferenceManager.getDefaultSharedPreferences(this);
 	}
@@ -59,6 +61,7 @@ public class Edit extends PreferenceActivity implements OnPreferenceChangeListen
 		 if(keyCode == KeyEvent.KEYCODE_BACK){
 			 daoImp.close();
 			 finish();
+			 startActivity(new Intent (Edit.this, MainActivity.class));
 			 return true;
 		 }
 		return false;
